@@ -1,0 +1,10 @@
+SELECT VEN.cliente, REC.bairro, VEN.valorliquido, VEN.valordesconto
+FROM
+TVENPEDIDO  VEN
+INNER JOIN trecclientegeral REC
+ON VEN.CLIENTE = REC.codigo
+where VEN.status = 'EFE' AND VEN.gerafinanceiro = 'S' and VEN.tipovenda = 'NM'
+and VEN.dataefe BETWEEN '01.01.2018' AND '31.12.2018'
+
+
+// A simple SQL that extracts sales by neighborhoods
